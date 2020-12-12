@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ReaderExcelDBModelStoreContainer" CdmEntityContainer="ReaderExcelDBEntities">
+    <EntitySetMapping Name="Tables">
+      <EntityTypeMapping TypeName="IsTypeOf(ReaderExcelDBModel.Table)">
+        <MappingFragment StoreEntitySet="Tables">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BATCHID" ColumnName="BATCHID" />
+          <ScalarProperty Name="POPID" ColumnName="POPID" />
+          <ScalarProperty Name="CHASSIS" ColumnName="CHASSIS" />
+          <ScalarProperty Name="CUSTOMER_ORDER" ColumnName="CUSTOMER_ORDER" />
+          <ScalarProperty Name="PART_PERIOD" ColumnName="PART_PERIOD" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="MARKET" ColumnName="MARKET" />
+          <ScalarProperty Name="MODEL" ColumnName="MODEL" />
+          <ScalarProperty Name="PDD" ColumnName="PDD" />
+          <ScalarProperty Name="PLAN_PACKING" ColumnName="PLAN_PACKING" />
+          <ScalarProperty Name="PLAN_DELIVERY" ColumnName="PLAN_DELIVERY" />
+          <ScalarProperty Name="LINER" ColumnName="LINER" />
+          <ScalarProperty Name="PORT_DESTINATION" ColumnName="PORT_DESTINATION" />
+          <ScalarProperty Name="INTTRA_NUMBER" ColumnName="INTTRA_NUMBER" />
+          <ScalarProperty Name="BOOKING" ColumnName="BOOKING" />
+          <ScalarProperty Name="TERMINAL" ColumnName="TERMINAL" />
+          <ScalarProperty Name="CONTAINER_40" ColumnName="CONTAINER_40" />
+          <ScalarProperty Name="CONTAINER_20" ColumnName="CONTAINER_20" />
+          <ScalarProperty Name="VESSEL" ColumnName="VESSEL" />
+          <ScalarProperty Name="LAST_DATE_OUT_SLA" ColumnName="LAST_DATE_OUT_SLA" />
+          <ScalarProperty Name="ETD_SANTOS" ColumnName="ETD_SANTOS" />
+          <ScalarProperty Name="ETD_SANTOS_2" ColumnName="ETD_SANTOS_2" />
+          <ScalarProperty Name="ATD_SANTOS" ColumnName="ATD_SANTOS" />
+          <ScalarProperty Name="ETA_DESTINATION" ColumnName="ETA_DESTINATION" />
+          <ScalarProperty Name="ETA_DESTINATION_2" ColumnName="ETA_DESTINATION_2" />
+          <ScalarProperty Name="ATA_DESTINATION" ColumnName="ATA_DESTINATION" />
+          <ScalarProperty Name="COMMENTS" ColumnName="COMMENTS" />
+          <ScalarProperty Name="ETA_PDD" ColumnName="ETA_PDD" />
+          <ScalarProperty Name="PLANPACKING" ColumnName="PLANPACKING" />
+          <ScalarProperty Name="PLANDELIVERY" ColumnName="PLANDELIVERY" />
+          <ScalarProperty Name="PORTDESTINATION" ColumnName="PORTDESTINATION" />
+          <ScalarProperty Name="INTTRANUMBER" ColumnName="INTTRANUMBER" />
+          <ScalarProperty Name="CONTAINER40" ColumnName="CONTAINER40" />
+          <ScalarProperty Name="CONTAINER20" ColumnName="CONTAINER20" />
+          <ScalarProperty Name="LASTDATEOUTSLA" ColumnName="LASTDATEOUTSLA" />
+          <ScalarProperty Name="ETDSANTOS" ColumnName="ETDSANTOS" />
+          <ScalarProperty Name="ETDSANTOS2" ColumnName="ETDSANTOS2" />
+          <ScalarProperty Name="ATDSANTOS" ColumnName="ATDSANTOS" />
+          <ScalarProperty Name="ETADESTINATION" ColumnName="ETADESTINATION" />
+          <ScalarProperty Name="ETADESTINATION2" ColumnName="ETADESTINATION2" />
+          <ScalarProperty Name="ATADESTINATION" ColumnName="ATADESTINATION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

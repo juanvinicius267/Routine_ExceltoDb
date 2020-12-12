@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ReaderExcelDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Table">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="BATCHID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="POPID" Type="Int32" />
+    <Property Name="CHASSIS" Type="Int32" />
+    <Property Name="CUSTOMER_ORDER" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PART_PERIOD" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TYPE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MARKET" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MODEL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PDD" Type="DateTime" />
+    <Property Name="PLAN_PACKING" Type="DateTime" Precision="0" />
+    <Property Name="PLAN_DELIVERY" Type="DateTime" Precision="0" />
+    <Property Name="LINER" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PORT_DESTINATION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="INTTRA_NUMBER" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BOOKING" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TERMINAL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CONTAINER_40" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CONTAINER_20" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="VESSEL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_DATE_OUT_SLA" Type="DateTime" Precision="0" />
+    <Property Name="ETD_SANTOS" Type="DateTime" Precision="0" />
+    <Property Name="ETD_SANTOS_2" Type="DateTime" Precision="0" />
+    <Property Name="ATD_SANTOS" Type="DateTime" Precision="0" />
+    <Property Name="ETA_DESTINATION" Type="DateTime" Precision="0" />
+    <Property Name="ETA_DESTINATION_2" Type="DateTime" Precision="0" />
+    <Property Name="ATA_DESTINATION" Type="DateTime" Precision="0" />
+    <Property Name="COMMENTS" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ETA_PDD" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PLANPACKING" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PLANDELIVERY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PORTDESTINATION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="INTTRANUMBER" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CONTAINER40" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CONTAINER20" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LASTDATEOUTSLA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ETDSANTOS" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ETDSANTOS2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ATDSANTOS" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ETADESTINATION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ETADESTINATION2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ATADESTINATION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="ReaderExcelDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Tables" EntityType="Self.Table" />
+  </EntityContainer>
+</Schema>

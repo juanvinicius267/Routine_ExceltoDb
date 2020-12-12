@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Maritimo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BatchId" Type="nvarchar(max)" />
+    <Property Name="PopId" Type="nvarchar(max)" />
+    <Property Name="Chassis" Type="nvarchar(max)" />
+    <Property Name="CustomerOrder" Type="nvarchar(max)" />
+    <Property Name="PartPeriod" Type="nvarchar(max)" />
+    <Property Name="Type" Type="nvarchar(max)" />
+    <Property Name="Market" Type="nvarchar(max)" />
+    <Property Name="Model" Type="nvarchar(max)" />
+    <Property Name="PDD" Type="nvarchar(max)" />
+    <Property Name="PlanPacking" Type="nvarchar(max)" />
+    <Property Name="PlanDelivery" Type="nvarchar(max)" />
+    <Property Name="Liner" Type="nvarchar(max)" />
+    <Property Name="PortDestination" Type="nvarchar(max)" />
+    <Property Name="InttraNumber" Type="nvarchar(max)" />
+    <Property Name="Booking" Type="nvarchar(max)" />
+    <Property Name="Terminal" Type="nvarchar(max)" />
+    <Property Name="Container40" Type="nvarchar(max)" />
+    <Property Name="Container20" Type="nvarchar(max)" />
+    <Property Name="Vessel" Type="nvarchar(max)" />
+    <Property Name="LastDateOutSLA" Type="nvarchar(max)" />
+    <Property Name="ETDSantos" Type="nvarchar(max)" />
+    <Property Name="ETD2Santos" Type="nvarchar(max)" />
+    <Property Name="ATDSantos" Type="nvarchar(max)" />
+    <Property Name="ETADestination" Type="nvarchar(max)" />
+    <Property Name="ETA2Destination" Type="nvarchar(max)" />
+    <Property Name="ATADestination" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="Maritimo" EntityType="Self.Maritimo" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

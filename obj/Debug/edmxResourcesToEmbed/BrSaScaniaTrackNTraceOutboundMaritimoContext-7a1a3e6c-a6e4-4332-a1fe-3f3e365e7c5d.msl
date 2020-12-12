@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="Maritimo">
+      <EntityTypeMapping TypeName="Model.Maritimo">
+        <MappingFragment StoreEntitySet="Maritimo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="BatchId" ColumnName="BatchId" />
+          <ScalarProperty Name="PopId" ColumnName="PopId" />
+          <ScalarProperty Name="Chassis" ColumnName="Chassis" />
+          <ScalarProperty Name="CustomerOrder" ColumnName="CustomerOrder" />
+          <ScalarProperty Name="PartPeriod" ColumnName="PartPeriod" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Market" ColumnName="Market" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="PDD" ColumnName="PDD" />
+          <ScalarProperty Name="PlanPacking" ColumnName="PlanPacking" />
+          <ScalarProperty Name="PlanDelivery" ColumnName="PlanDelivery" />
+          <ScalarProperty Name="Liner" ColumnName="Liner" />
+          <ScalarProperty Name="PortDestination" ColumnName="PortDestination" />
+          <ScalarProperty Name="InttraNumber" ColumnName="InttraNumber" />
+          <ScalarProperty Name="Booking" ColumnName="Booking" />
+          <ScalarProperty Name="Terminal" ColumnName="Terminal" />
+          <ScalarProperty Name="Container40" ColumnName="Container40" />
+          <ScalarProperty Name="Container20" ColumnName="Container20" />
+          <ScalarProperty Name="Vessel" ColumnName="Vessel" />
+          <ScalarProperty Name="LastDateOutSLA" ColumnName="LastDateOutSLA" />
+          <ScalarProperty Name="ETDSantos" ColumnName="ETDSantos" />
+          <ScalarProperty Name="ETD2Santos" ColumnName="ETD2Santos" />
+          <ScalarProperty Name="ATDSantos" ColumnName="ATDSantos" />
+          <ScalarProperty Name="ETADestination" ColumnName="ETADestination" />
+          <ScalarProperty Name="ETA2Destination" ColumnName="ETA2Destination" />
+          <ScalarProperty Name="ATADestination" ColumnName="ATADestination" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

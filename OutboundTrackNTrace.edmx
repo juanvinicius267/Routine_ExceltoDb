@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="OutboundTrackNTraceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Maritimo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BatchId" Type="nvarchar(max)" />
+          <Property Name="PopId" Type="nvarchar(max)" />
+          <Property Name="Chassis" Type="nvarchar(max)" />
+          <Property Name="CustomerOrder" Type="nvarchar(max)" />
+          <Property Name="PartPeriod" Type="nvarchar(max)" />
+          <Property Name="Type" Type="nvarchar(max)" />
+          <Property Name="Market" Type="nvarchar(max)" />
+          <Property Name="Model" Type="nvarchar(max)" />
+          <Property Name="PDD" Type="nvarchar(max)" />
+          <Property Name="PlanPacking" Type="nvarchar(max)" />
+          <Property Name="PlanDelivery" Type="nvarchar(max)" />
+          <Property Name="Liner" Type="nvarchar(max)" />
+          <Property Name="PortDestination" Type="nvarchar(max)" />
+          <Property Name="InttraNumber" Type="nvarchar(max)" />
+          <Property Name="Booking" Type="nvarchar(max)" />
+          <Property Name="Terminal" Type="nvarchar(max)" />
+          <Property Name="Container40" Type="nvarchar(max)" />
+          <Property Name="Container20" Type="nvarchar(max)" />
+          <Property Name="Vessel" Type="nvarchar(max)" />
+          <Property Name="LastDateOutSLA" Type="nvarchar(max)" />
+          <Property Name="ETDSantos" Type="nvarchar(max)" />
+          <Property Name="ETD2Santos" Type="nvarchar(max)" />
+          <Property Name="ATDSantos" Type="nvarchar(max)" />
+          <Property Name="ETADestination" Type="nvarchar(max)" />
+          <Property Name="ETA2Destination" Type="nvarchar(max)" />
+          <Property Name="ATADestination" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="PortLocation">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PortName" Type="nvarchar(max)" />
+          <Property Name="Latitude" Type="nvarchar(max)" />
+          <Property Name="Longitude" Type="nvarchar(max)" />
+          <Property Name="Country" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="TruckOnBoards">
+          <Key>
+            <PropertyRef Name="TruckOnBoardId" />
+          </Key>
+          <Property Name="TruckOnBoardId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LicensePlate" Type="int" Nullable="false" />
+          <Property Name="TrackNumber" Type="nvarchar(max)" />
+          <Property Name="DataDeGravacao" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Latitude" Type="nvarchar(max)" />
+          <Property Name="Longitude" Type="nvarchar(max)" />
+          <Property Name="DataDaLocalizacao" Type="datetime2" Precision="7" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VesselData">
+          <Key>
+            <PropertyRef Name="VesselDataId" />
+          </Key>
+          <Property Name="VesselDataId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Imo" Type="nvarchar(max)" />
+          <Property Name="Mmsi" Type="nvarchar(max)" />
+          <Property Name="Indicative" Type="nvarchar(max)" />
+          <Property Name="Flag" Type="nvarchar(max)" />
+          <Property Name="AisVesselType" Type="nvarchar(max)" />
+          <Property Name="Capacity" Type="nvarchar(max)" />
+          <Property Name="VesselSize" Type="nvarchar(max)" />
+          <Property Name="Year" Type="nvarchar(max)" />
+          <Property Name="State" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="VesselLocation">
+          <Key>
+            <PropertyRef Name="VesselLocationId" />
+          </Key>
+          <Property Name="VesselLocationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Mmsi" Type="nvarchar(max)" />
+          <Property Name="Lon" Type="nvarchar(max)" />
+          <Property Name="Lat" Type="nvarchar(max)" />
+          <Property Name="SavedHourOnDB" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="OutboundTrackNTraceModelStoreContainer">
+          <EntitySet Name="Maritimo" EntityType="Self.Maritimo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PortLocation" EntityType="Self.PortLocation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TruckOnBoards" EntityType="Self.TruckOnBoards" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VesselData" EntityType="Self.VesselData" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VesselLocation" EntityType="Self.VesselLocation" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="OutboundTrackNTraceModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Maritimo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BatchId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PopId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Chassis" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerOrder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PartPeriod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Market" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Model" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PDD" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PlanPacking" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PlanDelivery" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Liner" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PortDestination" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="InttraNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Booking" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Terminal" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Container40" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Container20" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Vessel" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LastDateOutSLA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ETDSantos" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ETD2Santos" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ATDSantos" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ETADestination" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ETA2Destination" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ATADestination" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="PortLocation">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PortName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Latitude" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Longitude" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Country" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TruckOnBoards">
+          <Key>
+            <PropertyRef Name="TruckOnBoardId" />
+          </Key>
+          <Property Name="TruckOnBoardId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LicensePlate" Type="Int32" Nullable="false" />
+          <Property Name="TrackNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DataDeGravacao" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="Latitude" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Longitude" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DataDaLocalizacao" Type="DateTime" Nullable="false" Precision="7" />
+        </EntityType>
+        <EntityType Name="VesselData">
+          <Key>
+            <PropertyRef Name="VesselDataId" />
+          </Key>
+          <Property Name="VesselDataId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Imo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Mmsi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Indicative" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Flag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AisVesselType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Capacity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VesselSize" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Year" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="VesselLocation">
+          <Key>
+            <PropertyRef Name="VesselLocationId" />
+          </Key>
+          <Property Name="VesselLocationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Mmsi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Lon" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Lat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SavedHourOnDB" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="OutboundTrackNTrace" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Maritimo" EntityType="Self.Maritimo" />
+          <EntitySet Name="PortLocation" EntityType="Self.PortLocation" />
+          <EntitySet Name="TruckOnBoards" EntityType="Self.TruckOnBoards" />
+          <EntitySet Name="VesselData" EntityType="Self.VesselData" />
+          <EntitySet Name="VesselLocation" EntityType="Self.VesselLocation" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="OutboundTrackNTraceModelStoreContainer" CdmEntityContainer="OutboundTrackNTrace">
+          <EntitySetMapping Name="Maritimo">
+            <EntityTypeMapping TypeName="OutboundTrackNTraceModel.Maritimo">
+              <MappingFragment StoreEntitySet="Maritimo">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="BatchId" ColumnName="BatchId" />
+                <ScalarProperty Name="PopId" ColumnName="PopId" />
+                <ScalarProperty Name="Chassis" ColumnName="Chassis" />
+                <ScalarProperty Name="CustomerOrder" ColumnName="CustomerOrder" />
+                <ScalarProperty Name="PartPeriod" ColumnName="PartPeriod" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Market" ColumnName="Market" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="PDD" ColumnName="PDD" />
+                <ScalarProperty Name="PlanPacking" ColumnName="PlanPacking" />
+                <ScalarProperty Name="PlanDelivery" ColumnName="PlanDelivery" />
+                <ScalarProperty Name="Liner" ColumnName="Liner" />
+                <ScalarProperty Name="PortDestination" ColumnName="PortDestination" />
+                <ScalarProperty Name="InttraNumber" ColumnName="InttraNumber" />
+                <ScalarProperty Name="Booking" ColumnName="Booking" />
+                <ScalarProperty Name="Terminal" ColumnName="Terminal" />
+                <ScalarProperty Name="Container40" ColumnName="Container40" />
+                <ScalarProperty Name="Container20" ColumnName="Container20" />
+                <ScalarProperty Name="Vessel" ColumnName="Vessel" />
+                <ScalarProperty Name="LastDateOutSLA" ColumnName="LastDateOutSLA" />
+                <ScalarProperty Name="ETDSantos" ColumnName="ETDSantos" />
+                <ScalarProperty Name="ETD2Santos" ColumnName="ETD2Santos" />
+                <ScalarProperty Name="ATDSantos" ColumnName="ATDSantos" />
+                <ScalarProperty Name="ETADestination" ColumnName="ETADestination" />
+                <ScalarProperty Name="ETA2Destination" ColumnName="ETA2Destination" />
+                <ScalarProperty Name="ATADestination" ColumnName="ATADestination" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PortLocation">
+            <EntityTypeMapping TypeName="OutboundTrackNTraceModel.PortLocation">
+              <MappingFragment StoreEntitySet="PortLocation">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="PortName" ColumnName="PortName" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TruckOnBoards">
+            <EntityTypeMapping TypeName="OutboundTrackNTraceModel.TruckOnBoards">
+              <MappingFragment StoreEntitySet="TruckOnBoards">
+                <ScalarProperty Name="TruckOnBoardId" ColumnName="TruckOnBoardId" />
+                <ScalarProperty Name="LicensePlate" ColumnName="LicensePlate" />
+                <ScalarProperty Name="TrackNumber" ColumnName="TrackNumber" />
+                <ScalarProperty Name="DataDeGravacao" ColumnName="DataDeGravacao" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="DataDaLocalizacao" ColumnName="DataDaLocalizacao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VesselData">
+            <EntityTypeMapping TypeName="OutboundTrackNTraceModel.VesselData">
+              <MappingFragment StoreEntitySet="VesselData">
+                <ScalarProperty Name="VesselDataId" ColumnName="VesselDataId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Imo" ColumnName="Imo" />
+                <ScalarProperty Name="Mmsi" ColumnName="Mmsi" />
+                <ScalarProperty Name="Indicative" ColumnName="Indicative" />
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="AisVesselType" ColumnName="AisVesselType" />
+                <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+                <ScalarProperty Name="VesselSize" ColumnName="VesselSize" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="State" ColumnName="State" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VesselLocation">
+            <EntityTypeMapping TypeName="OutboundTrackNTraceModel.VesselLocation">
+              <MappingFragment StoreEntitySet="VesselLocation">
+                <ScalarProperty Name="VesselLocationId" ColumnName="VesselLocationId" />
+                <ScalarProperty Name="Mmsi" ColumnName="Mmsi" />
+                <ScalarProperty Name="Lon" ColumnName="Lon" />
+                <ScalarProperty Name="Lat" ColumnName="Lat" />
+                <ScalarProperty Name="SavedHourOnDB" ColumnName="SavedHourOnDB" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

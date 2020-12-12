@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ExcelDataReaderModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ExcelDataReaderModelStoreContainer">
+    <EntitySet Name="ExcelDataReaders" EntityType="ExcelDataReaderModel.Store.ExcelDataReaders" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="ExcelDataReaders">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BatchId" Type="nchar" Nullable="true" MaxLength="110" />
+    <Property Name="PopId" Type="nchar" Nullable="true" MaxLength="110" />
+    <Property Name="Chassis" Type="nchar" Nullable="true" MaxLength="110" />
+    <Property Name="CustomerOrder" Type="nchar" Nullable="true" MaxLength="110" />
+    <Property Name="PartPeriod" Type="nchar" Nullable="true" MaxLength="110" />
+    <Property Name="Type" Type="nchar" Nullable="true" MaxLength="110" />
+    <Property Name="Market" Type="nchar" Nullable="true" MaxLength="110" />
+    <Property Name="Model" Type="nchar" Nullable="true" MaxLength="110" />
+    <Property Name="PDD" Type="nchar" Nullable="true" MaxLength="110" />
+    <Property Name="PlanPacking" Type="nchar" Nullable="true" MaxLength="110" />
+    <Property Name="PlanDelivery" Type="nchar" Nullable="true" MaxLength="110" />
+    <Property Name="Liner" Type="nchar" Nullable="true" MaxLength="110" />
+    <Property Name="PortDestination" Type="nchar" Nullable="true" MaxLength="110" />
+    <Property Name="InttraNumber" Type="nchar" Nullable="true" MaxLength="110" />
+    <Property Name="Booking" Type="nchar" Nullable="true" MaxLength="110" />
+    <Property Name="Terminal" Type="nchar" Nullable="true" MaxLength="110" />
+    <Property Name="Container40" Type="nchar" Nullable="true" MaxLength="110" />
+    <Property Name="Container20" Type="nchar" Nullable="true" MaxLength="110" />
+    <Property Name="Vessel" Type="nchar" Nullable="true" MaxLength="110" />
+    <Property Name="LastDateOutSLA" Type="nchar" Nullable="true" MaxLength="110" />
+    <Property Name="ETDSantos" Type="nchar" Nullable="true" MaxLength="110" />
+    <Property Name="ETD2Santos" Type="nchar" Nullable="true" MaxLength="110" />
+    <Property Name="ATDSantos" Type="nchar" Nullable="true" MaxLength="110" />
+    <Property Name="ETADestination" Type="nchar" Nullable="true" MaxLength="110" />
+    <Property Name="ETA2Destination" Type="nchar" Nullable="true" MaxLength="110" />
+    <Property Name="ATADestination" Type="nchar" Nullable="true" MaxLength="110" />
+  </EntityType>
+</Schema>

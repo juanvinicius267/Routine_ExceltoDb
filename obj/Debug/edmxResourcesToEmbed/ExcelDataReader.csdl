@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ExcelDataReaderModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ExcelDataReader">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BatchId" Type="String" MaxLength="110" FixedLength="true" Unicode="true" />
+    <Property Name="PopId" Type="String" MaxLength="110" FixedLength="true" Unicode="true" />
+    <Property Name="Chassis" Type="String" MaxLength="110" FixedLength="true" Unicode="true" />
+    <Property Name="CustomerOrder" Type="String" MaxLength="110" FixedLength="true" Unicode="true" />
+    <Property Name="PartPeriod" Type="String" MaxLength="110" FixedLength="true" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="110" FixedLength="true" Unicode="true" />
+    <Property Name="Market" Type="String" MaxLength="110" FixedLength="true" Unicode="true" />
+    <Property Name="Model" Type="String" MaxLength="110" FixedLength="true" Unicode="true" />
+    <Property Name="PDD" Type="String" MaxLength="110" FixedLength="true" Unicode="true" />
+    <Property Name="PlanPacking" Type="String" MaxLength="110" FixedLength="true" Unicode="true" />
+    <Property Name="PlanDelivery" Type="String" MaxLength="110" FixedLength="true" Unicode="true" />
+    <Property Name="Liner" Type="String" MaxLength="110" FixedLength="true" Unicode="true" />
+    <Property Name="PortDestination" Type="String" MaxLength="110" FixedLength="true" Unicode="true" />
+    <Property Name="InttraNumber" Type="String" MaxLength="110" FixedLength="true" Unicode="true" />
+    <Property Name="Booking" Type="String" MaxLength="110" FixedLength="true" Unicode="true" />
+    <Property Name="Terminal" Type="String" MaxLength="110" FixedLength="true" Unicode="true" />
+    <Property Name="Container40" Type="String" MaxLength="110" FixedLength="true" Unicode="true" />
+    <Property Name="Container20" Type="String" MaxLength="110" FixedLength="true" Unicode="true" />
+    <Property Name="Vessel" Type="String" MaxLength="110" FixedLength="true" Unicode="true" />
+    <Property Name="LastDateOutSLA" Type="String" MaxLength="110" FixedLength="true" Unicode="true" />
+    <Property Name="ETDSantos" Type="String" MaxLength="110" FixedLength="true" Unicode="true" />
+    <Property Name="ETD2Santos" Type="String" MaxLength="110" FixedLength="true" Unicode="true" />
+    <Property Name="ATDSantos" Type="String" MaxLength="110" FixedLength="true" Unicode="true" />
+    <Property Name="ETADestination" Type="String" MaxLength="110" FixedLength="true" Unicode="true" />
+    <Property Name="ETA2Destination" Type="String" MaxLength="110" FixedLength="true" Unicode="true" />
+    <Property Name="ATADestination" Type="String" MaxLength="110" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="ExcelDataReaderEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ExcelDataReaders" EntityType="Self.ExcelDataReader" />
+  </EntityContainer>
+</Schema>

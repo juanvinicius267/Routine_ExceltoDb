@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ReaderExcelDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ReaderExcelDBModelStoreContainer">
+    <EntitySet Name="Tables" EntityType="ReaderExcelDBModel.Store.Tables" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Tables">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="BATCHID" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="POPID" Type="int" Nullable="true" />
+    <Property Name="CHASSIS" Type="int" Nullable="true" />
+    <Property Name="CUSTOMER_ORDER" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="PART_PERIOD" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="TYPE" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="MARKET" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="MODEL" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="PDD" Type="datetime" Nullable="true" />
+    <Property Name="PLAN_PACKING" Type="datetime" Nullable="true" />
+    <Property Name="PLAN_DELIVERY" Type="datetime" Nullable="true" />
+    <Property Name="LINER" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="PORT_DESTINATION" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="INTTRA_NUMBER" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="BOOKING" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="TERMINAL" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="CONTAINER_40" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="CONTAINER_20" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="VESSEL" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="LAST_DATE_OUT_SLA" Type="datetime" Nullable="true" />
+    <Property Name="ETD_SANTOS" Type="datetime" Nullable="true" />
+    <Property Name="ETD_SANTOS_2" Type="datetime" Nullable="true" />
+    <Property Name="ATD_SANTOS" Type="datetime" Nullable="true" />
+    <Property Name="ETA_DESTINATION" Type="datetime" Nullable="true" />
+    <Property Name="ETA_DESTINATION_2" Type="datetime" Nullable="true" />
+    <Property Name="ATA_DESTINATION" Type="datetime" Nullable="true" />
+    <Property Name="COMMENTS" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="ETA_PDD" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="PLANPACKING" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="PLANDELIVERY" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="PORTDESTINATION" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="INTTRANUMBER" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="CONTAINER40" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="CONTAINER20" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="LASTDATEOUTSLA" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="ETDSANTOS" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="ETDSANTOS2" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="ATDSANTOS" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="ETADESTINATION" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="ETADESTINATION2" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="ATADESTINATION" Type="varchar" Nullable="true" MaxLength="100" />
+  </EntityType>
+</Schema>
